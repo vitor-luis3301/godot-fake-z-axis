@@ -1,0 +1,48 @@
+[gd_scene load_steps=3 format=3 uid="uid://c7blwdxuv15of"]
+
+[ext_resource type="PackedScene" uid="uid://dquqvhcqqwi1i" path="res://player.tscn" id="1_8pfaq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8ec76"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("1_8pfaq")]
+position = Vector2(429, 422)
+
+[node name="StaticBody2D2" type="Area2D" parent="."]
+position = Vector2(325, 244)
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(0, 40)
+scale = Vector2(2, 2)
+shape = SubResource("RectangleShape2D_8ec76")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D2"]
+light_mask = 2
+visibility_layer = 2
+position = Vector2(-40, 0)
+scale = Vector2(2, 2)
+shape = SubResource("RectangleShape2D_8ec76")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D2"]
+light_mask = 2
+visibility_layer = 2
+position = Vector2(0, -40)
+scale = Vector2(2, 2)
+shape = SubResource("RectangleShape2D_8ec76")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D2"]
+light_mask = 2
+visibility_layer = 2
+position = Vector2(40, 0)
+scale = Vector2(2, 2)
+shape = SubResource("RectangleShape2D_8ec76")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(325, 244)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+scale = Vector2(2, 2)
+shape = SubResource("RectangleShape2D_8ec76")
